@@ -1,8 +1,8 @@
 # 📚 Aplicação de Estrutura de Dados
 
-Repositório destinado às atividades práticas da disciplina de **Estrutura de Dados**, utilizando a linguagem de programação **Java**.
+Repositório destinado às atividades práticas da disciplina de **Aplicação de Estrutura de Dados**, utilizando a linguagem de programação **Java**.
 
-O objetivo deste projeto é praticar conceitos fundamentais de programação, estruturas de dados, manipulação de arquivos, orientação a objetos e o **Java Collections Framework**.
+O objetivo deste projeto é praticar conceitos fundamentais de programação, estruturas de dados, manipulação de arquivos, orientação a objetos, Java Collections Framework e implementação de estruturas encadeadas.
 
 ---
 
@@ -21,12 +21,22 @@ O objetivo deste projeto é praticar conceitos fundamentais de programação, es
 ```text
 Aplicacao-de-estrutura-de-dados/
 │
+├── Aulas/
+├── Exercicios/
+├── Link do video/
+├── Prova1/
+│   ├── No.java
+│   ├── Livro.java
+│   ├── ListaDuplamenteEncadeada.java
+│   └── Main.java
+│
 ├── Atividade1.java
 ├── Atividade2.java
 ├── Atividade3.java
 ├── prog1.java
 ├── Prog2.java
 ├── dados.txt
+├── LICENSE
 └── README.md
 ```
 
@@ -157,6 +167,7 @@ Resultado:
 
 ```text
 === TIPOS PRIMITIVOS ===
+
 Valor de a: 20
 Valor de b: 10
 ```
@@ -173,11 +184,9 @@ No exemplo de tipos de referência é utilizada uma classe chamada `Aluno`.
 
 ```java
 Aluno aluno1 = new Aluno();
-
 aluno1.nota = 10;
 
 Aluno aluno2 = aluno1;
-
 aluno2.nota = 8;
 ```
 
@@ -185,6 +194,7 @@ Resultado:
 
 ```text
 === TIPOS DE REFERÊNCIA ===
+
 Nota do aluno1: 8
 Nota do aluno2: 8
 ```
@@ -257,16 +267,20 @@ Exibe informações como:
 
 ```text
 --- DADOS DO LIVRO ---
+
 Título: Java: Como Programar
 Autor: Deitel
 Páginas: 800
 Status: Disponível
 
 Livro emprestado com sucesso!
+
 O livro já está emprestado!
+
 Livro devolvido com sucesso!
 
 --- DADOS DO LIVRO ---
+
 Título: Java: Como Programar
 Autor: Deitel
 Páginas: 800
@@ -305,11 +319,8 @@ Exemplo:
 
 ```java
 for (int i = 1; i <= 5; i++) {
-
     System.out.print("Digite a nota " + i + ": ");
-
     double nota = scanner.nextDouble();
-
     notas.add(nota);
 }
 ```
@@ -358,6 +369,7 @@ Digite a nota 4: 9.5
 Digite a nota 5: 6.0
 
 Notas cadastradas:
+
 [8.5, 5.5, 7.0, 9.5, 6.0]
 
 Média das notas: 7.30
@@ -385,6 +397,172 @@ A nota `5.5` foi removida porque é menor que `6.0`.
 
 ---
 
+# 🔗 Prova 1 - Lista Duplamente Encadeada
+
+Nesta atividade foi implementada uma **Lista Duplamente Encadeada em Java**.
+
+O objetivo é compreender a estrutura interna de uma lista encadeada utilizando nós que possuem referência tanto para o próximo elemento quanto para o elemento anterior.
+
+O trabalho solicita o cadastro de pelo menos 5 objetos e a implementação dos métodos `add()` e `imprimir()`.
+
+---
+
+## 📂 Arquivos da Prova 1
+
+```text
+Prova1/
+├── No.java
+├── Livro.java
+├── ListaDuplamenteEncadeada.java
+└── Main.java
+```
+
+---
+
+## 🧩 Classe No
+
+A classe `No` representa cada elemento da lista.
+
+Cada nó possui:
+
+```java
+Object objeto;
+No proximo;
+No anterior;
+```
+
+Dessa forma, cada elemento possui uma referência para o próximo nó e para o nó anterior.
+
+---
+
+## 📚 Classe Livro
+
+Foi utilizada a classe `Livro` como modelo de objeto do mundo real.
+
+A classe possui os atributos:
+
+```java
+private String titulo;
+private String autor;
+private int ano;
+```
+
+Também foi sobrescrito o método:
+
+```java
+toString()
+```
+
+para permitir a exibição organizada dos dados de cada livro.
+
+---
+
+## 🔗 Classe ListaDuplamenteEncadeada
+
+A classe `ListaDuplamenteEncadeada` é responsável pelo gerenciamento dos nós.
+
+Ela possui duas referências principais:
+
+```java
+private No inicio;
+private No fim;
+```
+
+---
+
+## ➕ Método add()
+
+O método:
+
+```java
+add(Object objeto)
+```
+
+é responsável por adicionar novos objetos ao final da lista.
+
+Quando um novo objeto é inserido, as referências `proximo` e `anterior` são atualizadas.
+
+---
+
+## 🖨️ Método imprimir()
+
+O método:
+
+```java
+imprimir()
+```
+
+percorre a lista do primeiro elemento até o último.
+
+Durante o percurso, cada objeto armazenado na lista é exibido no console.
+
+---
+
+## 📖 Livros cadastrados
+
+Foram utilizados 5 livros para testar a Lista Duplamente Encadeada:
+
+1. Dom Casmurro — Machado de Assis
+2. O Cortiço — Aluísio Azevedo
+3. Iracema — José de Alencar
+4. Vidas Secas — Graciliano Ramos
+5. Capitães da Areia — Jorge Amado
+
+---
+
+## 🔗 Representação da Lista
+
+```text
+null
+  ↑
+[Livro 1]
+  ⇅
+[Livro 2]
+  ⇅
+[Livro 3]
+  ⇅
+[Livro 4]
+  ⇅
+[Livro 5]
+  ↓
+ null
+```
+
+Cada elemento possui ligação com o próximo e com o anterior.
+
+---
+
+## 📋 Exemplo de Execução
+
+```text
+===== ELEMENTOS DA LISTA =====
+Título: Dom Casmurro | Autor: Machado de Assis | Ano: 1899
+Título: O Cortiço | Autor: Aluísio Azevedo | Ano: 1890
+Título: Iracema | Autor: José de Alencar | Ano: 1865
+Título: Vidas Secas | Autor: Graciliano Ramos | Ano: 1938
+Título: Capitães da Areia | Autor: Jorge Amado | Ano: 1937
+```
+
+---
+
+## 🧠 Conceitos utilizados na Prova 1
+
+- Lista Duplamente Encadeada;
+- Nós;
+- Referências;
+- Próximo elemento;
+- Elemento anterior;
+- Classes;
+- Objetos;
+- Construtores;
+- Encapsulamento;
+- Programação Orientada a Objetos;
+- Percurso de listas;
+- Método `toString()`;
+- Estrutura `while`.
+
+---
+
 # 🛠️ Tecnologias Utilizadas
 
 O projeto utiliza:
@@ -394,6 +572,7 @@ O projeto utiliza:
 - 📋 ArrayList
 - ⌨️ Scanner
 - 📁 FileReader
+- 🔗 Lista Duplamente Encadeada
 - 🔄 Estruturas de repetição
 - 🔀 Estruturas condicionais
 - 🧩 Programação Orientada a Objetos
@@ -515,6 +694,30 @@ java Prog2
 
 ---
 
+# ▶️ Executar Prova 1
+
+Entre na pasta:
+
+```powershell
+cd Prova1
+```
+
+Compile todos os arquivos:
+
+```powershell
+javac *.java
+```
+
+Execute o programa principal:
+
+```powershell
+java Main
+```
+
+O programa irá cadastrar os livros na Lista Duplamente Encadeada e exibir todos os elementos no terminal.
+
+---
+
 # 🧠 Conteúdos Estudados
 
 Durante o desenvolvimento das atividades foram trabalhados conceitos como:
@@ -531,6 +734,7 @@ Durante o desenvolvimento das atividades foram trabalhados conceitos como:
 - Classes;
 - Objetos;
 - Abstração;
+- Encapsulamento;
 - Atributos;
 - Métodos;
 - Construtores;
@@ -539,7 +743,12 @@ Durante o desenvolvimento das atividades foram trabalhados conceitos como:
 - Scanner;
 - Estruturas condicionais;
 - Estruturas de repetição;
-- Expressões Lambda.
+- Expressões Lambda;
+- Nós;
+- Listas Encadeadas;
+- Listas Duplamente Encadeadas;
+- Referência para próximo elemento;
+- Referência para elemento anterior.
 
 ---
 
@@ -562,8 +771,8 @@ Novas implementações de estruturas de dados serão adicionadas ao longo do sem
 
 ## 📄 Licença
 
-Este projeto possui finalidade **acadêmica e educacional**, sendo desenvolvido durante os estudos da disciplina de **Estrutura de Dados**.
+Este projeto possui finalidade **acadêmica e educacional**, sendo desenvolvido durante os estudos da disciplina de **Aplicação de Estrutura de Dados**.
 
 ---
 
-⭐ **Repositório criado para acompanhamento das atividades e evolução dos estudos em Estrutura de Dados com Java.**
+⭐ **Repositório criado para acompanhamento das atividades e evolução dos estudos em Aplicação de Estrutura de Dados com Java.**
