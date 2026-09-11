@@ -1,1123 +1,763 @@
-**# 📚 Aplicação de Estrutura de Dados**
+📚 Aplicação de Estrutura de Dados
 
-Repositório destinado às atividades práticas da disciplina de **\*\*Aplicação de Estrutura de Dados\*\***, utilizando a linguagem de programação **\*\*Java\*\***.
+Repositório destinado às atividades práticas da disciplina de Aplicação de Estrutura de Dados, utilizando a linguagem de programação Java.
 
-O objetivo deste projeto é praticar conceitos fundamentais de programação, estruturas de dados, manipulação de arquivos, orientação a objetos, Java Collections Framework e implementação de estruturas encadeadas.
+O objetivo deste projeto é praticar conceitos fundamentais de programação, estruturas de dados, manipulação de arquivos, orientação a objetos, Java Collections Framework, implementação de estruturas encadeadas e uso de Threads.
 
-**---**
+🎓 Informações Acadêmicas
 
-**## 🎓 Informações Acadêmicas**
+Curso: Sistemas para Internet
 
-\- **\*\*Curso:\*\*** Sistemas para Internet
+Instituição: Instituto Federal do Tocantins - IFTO
 
-\- **\*\*Instituição:\*\*** Instituto Federal do Tocantins - IFTO
+Professor: Prof. Me. Helder Cleber Almeida Pereira
 
-\- **\*\*Professor:\*\*** Prof. Me. Helder Cleber Almeida Pereira 
+Disciplina: Aplicação de Estrutura de Dados
 
-\- **\*\*Disciplina:\*\*** Aplicação de Estrutura de Dados
+Linguagem: Java
 
-\- **\*\*Linguagem:\*\*** Java
+IDE: Visual Studio Code
 
-**---**
-
-**## 📂 Estrutura do Projeto**
-
-\`\`\`text
+📂 Estrutura do Projeto
 
 Aplicacao-de-estrutura-de-dados/
-
 │
-
 ├── Aulas/
-
 ├── Exercicios/
-
 ├── Link do video/
-
 ├── Prova1/
-
-│   ├── No.java
-
-│   ├── Livro.java
-
-│   ├── ListaDuplamenteEncadeada.java
-
-│   └── Main.java
-
+│   ├── No.java
+│   ├── Livro.java
+│   ├── ListaDuplamenteEncadeada.java
+│   └── Main.java
 │
-
+├── Threads/
+│   └── VetorThreads.java
+│
 ├── Atividade1.java
-
 ├── Atividade2.java
-
 ├── Atividade3.java
-
 ├── prog1.java
-
 ├── Prog2.java
-
 ├── dados.txt
-
 ├── LICENSE
-
 └── README.md
 
-\`\`\`
+💻 Atividades Desenvolvidas
 
-**---**
+🔹 Prog1 - Vetores e ArrayList
 
-**# 💻 Atividades Desenvolvidas**
+Programa introdutório utilizado para demonstrar a diferença entre um vetor tradicional (Array) e um ArrayList em Java.
 
-**## 🔹 Prog1 - Vetores e ArrayList**
-
-Programa introdutório utilizado para demonstrar a diferença entre um **\*\*vetor tradicional (Array)\*\*** e um **\*\*ArrayList\*\*** em Java.
-
-**### Vetor tradicional**
+Vetor tradicional
 
 Um vetor possui tamanho definido no momento de sua criação.
 
 Exemplo:
 
-\`\`\`java
-
 int[] v = new int[3];
 
 v[0] = 1;
-
 v[1] = 10;
-
 v[2] = 40;
-
-\`\`\`
 
 Resultado:
 
-\`\`\`text
-
 Vetor:
-
 1
-
 10
-
 40
 
-\`\`\`
+ArrayList
 
-**### ArrayList**
-
-O \`ArrayList\` possui tamanho dinâmico e permite adicionar novos elementos durante a execução do programa.
+O ArrayList possui tamanho dinâmico e permite adicionar novos elementos durante a execução do programa.
 
 Exemplo:
 
-\`\`\`java
-
-ArrayList\<Integer> v2 = new ArrayList<>();
+ArrayList<Integer> v2 = new ArrayList<>();
 
 v2.add(1);
-
 v2.add(10);
-
 v2.add(40);
-
-\`\`\`
 
 Resultado:
 
-\`\`\`text
-
 ArrayList:
-
 1
-
 10
-
 40
 
-\`\`\`
+Conceitos utilizados
 
-**### Conceitos utilizados**
+Arrays;
 
-\- Arrays;
+ArrayList;
 
-\- ArrayList;
+Estruturas de repetição;
 
-\- Estruturas de repetição;
+Inserção de elementos;
 
-\- Inserção de elementos;
+Acesso aos elementos;
 
-\- Acesso aos elementos;
+Collections Framework.
 
-\- Collections Framework.
+🔹 Prog2 - Leitura de Arquivos
 
-**---**
-
-**## 🔹 Prog2 - Leitura de Arquivos**
-
-Programa desenvolvido para realizar a leitura de um arquivo de texto utilizando a classe \`FileReader\`.
+Programa desenvolvido para realizar a leitura de um arquivo de texto utilizando a classe FileReader.
 
 O programa abre o arquivo:
 
-\`\`\`text
-
 dados.txt
-
-\`\`\`
 
 e realiza a leitura de cada caractere até encontrar o final do arquivo.
 
-**### Exemplo**
-
-\`\`\`java
+Exemplo
 
 FileReader fr = new FileReader("dados.txt");
 
 int c;
 
 while ((c = fr.read()) != -1) {
-
-    System.out.print((char) c);
-
+    System.out.print((char) c);
 }
-
-\`\`\`
 
 O valor:
 
-\`\`\`text
-
 -1
-
-\`\`\`
 
 indica que o programa chegou ao final do arquivo.
 
-**### Conceitos utilizados**
+Conceitos utilizados
 
-\- FileReader;
+FileReader;
 
-\- IOException;
+IOException;
 
-\- Manipulação de arquivos;
+Manipulação de arquivos;
 
-\- Estrutura \`while\`;
+Estrutura while;
 
-\- Conversão de \`int\` para \`char\`;
+Conversão de int para char;
 
-\- Entrada e saída de dados.
+Entrada e saída de dados.
 
-**---**
+🔹 Atividade 1 - Tipos Primitivos e Tipos de Referência
 
-**# 🔹 Atividade 1 - Tipos Primitivos e Tipos de Referência**
+A atividade demonstra a diferença entre tipos primitivos e tipos de referência em Java.
 
-A atividade demonstra a diferença entre **\*\*tipos primitivos\*\*** e **\*\*tipos de referência\*\*** em Java.
-
-**## Tipos Primitivos**
+Tipos Primitivos
 
 Exemplo:
 
-\`\`\`java
-
 int a = 10;
-
 int b = a;
-
 a = 20;
-
-\`\`\`
 
 Resultado:
 
-\`\`\`text
-
-\=== TIPOS PRIMITIVOS ===
-
+=== TIPOS PRIMITIVOS ===
 Valor de a: 20
-
 Valor de b: 10
 
-\`\`\`
+Nesse caso, a variável b recebe uma cópia do valor armazenado em a.
 
-Nesse caso, a variável \`b\` recebe uma cópia do valor armazenado em \`a\`.
+Por isso, quando o valor de a é alterado para 20, o valor de b continua sendo 10.
 
-Por isso, quando o valor de \`a\` é alterado para \`20\`, o valor de \`b\` continua sendo \`10\`.
+Tipos de Referência
 
-**---**
-
-**## Tipos de Referência**
-
-No exemplo de tipos de referência é utilizada uma classe chamada \`Aluno\`.
-
-\`\`\`java
+No exemplo de tipos de referência é utilizada uma classe chamada Aluno.
 
 Aluno aluno1 = new Aluno();
-
 aluno1.nota = 10;
 
 Aluno aluno2 = aluno1;
-
 aluno2.nota = 8;
-
-\`\`\`
 
 Resultado:
 
-\`\`\`text
-
-\=== TIPOS DE REFERÊNCIA ===
-
+=== TIPOS DE REFERÊNCIA ===
 Nota do aluno1: 8
-
 Nota do aluno2: 8
 
-\`\`\`
+Nesse caso, aluno1 e aluno2 fazem referência ao mesmo objeto.
 
-Nesse caso, \`aluno1\` e \`aluno2\` fazem referência ao mesmo objeto.
+Portanto, uma alteração realizada através de aluno2 também pode ser observada através de aluno1.
 
-Portanto, uma alteração realizada através de \`aluno2\` também pode ser observada através de \`aluno1\`.
+Conceitos utilizados
 
-**### Conceitos utilizados**
+Tipos primitivos;
 
-\- Tipos primitivos;
+Tipos de referência;
 
-\- Tipos de referência;
+Objetos;
 
-\- Objetos;
+Referências de memória;
 
-\- Referências de memória;
+Stack;
 
-\- Stack;
+Heap;
 
-\- Heap;
+Classes.
 
-\- Classes.
+🔹 Atividade 2 - Abstração de uma Entidade do Mundo Real
 
-**---**
-
-**# 🔹 Atividade 2 - Abstração de uma Entidade do Mundo Real**
-
-Nesta atividade foi criada uma classe \`Livro\` para representar a abstração de um livro dentro de um sistema de biblioteca.
+Nesta atividade foi criada uma classe Livro para representar a abstração de um livro dentro de um sistema de biblioteca.
 
 A classe possui os seguintes atributos:
 
-\`\`\`java
-
 String titulo;
-
 String autor;
-
 int paginas;
-
 boolean disponivel;
 
-\`\`\`
-
-**## Métodos**
+Métodos
 
 Foram implementados métodos para controlar a disponibilidade do livro.
 
-**### Emprestar livro**
-
-\`\`\`java
+Emprestar livro
 
 void emprestar()
-
-\`\`\`
 
 O método verifica se o livro está disponível.
 
 Caso esteja disponível, o status é alterado para emprestado.
 
-**### Devolver livro**
-
-\`\`\`java
+Devolver livro
 
 void devolver()
 
-\`\`\`
-
 O método realiza a devolução do livro e altera novamente seu status para disponível.
 
-**### Exibir dados**
-
-\`\`\`java
+Exibir dados
 
 void exibirDados()
 
-\`\`\`
-
 Exibe informações como:
 
-\- Título;
+Título;
 
-\- Autor;
+Autor;
 
-\- Quantidade de páginas;
+Quantidade de páginas;
 
-\- Status de disponibilidade.
+Status de disponibilidade.
 
-**### Exemplo de execução**
+Exemplo de execução
 
-\`\`\`text
-
-\--- DADOS DO LIVRO ---
+--- DADOS DO LIVRO ---
 
 Título: Java: Como Programar
-
 Autor: Deitel
-
 Páginas: 800
-
 Status: Disponível
 
 Livro emprestado com sucesso!
-
 O livro já está emprestado!
-
 Livro devolvido com sucesso!
 
-\--- DADOS DO LIVRO ---
+--- DADOS DO LIVRO ---
 
 Título: Java: Como Programar
-
 Autor: Deitel
-
 Páginas: 800
-
 Status: Disponível
 
-\`\`\`
+Conceitos utilizados
 
-**### Conceitos utilizados**
+Programação Orientada a Objetos;
 
-\- Programação Orientada a Objetos;
+Classes;
 
-\- Classes;
+Objetos;
 
-\- Objetos;
+Atributos;
 
-\- Atributos;
+Métodos;
 
-\- Métodos;
+Construtores;
 
-\- Construtores;
+Abstração;
 
-\- Abstração;
+Boolean;
 
-\- Boolean;
+Estruturas condicionais.
 
-\- Estruturas condicionais.
+🔹 Atividade 3 - Uso do Collections Framework
 
-**---**
-
-**# 🔹 Atividade 3 - Uso do Collections Framework**
-
-Nesta atividade foi utilizado o **\*\*Collections Framework do Java\*\*** para desenvolver um pequeno sistema de controle de notas.
+Nesta atividade foi utilizado o Collections Framework do Java para desenvolver um pequeno sistema de controle de notas.
 
 Foi utilizada a estrutura:
 
-\`\`\`java
+List<Double> notas = new ArrayList<>();
 
-List\<Double> notas = new ArrayList<>();
+O programa solicita ao usuário a entrada de 5 notas.
 
-\`\`\`
-
-O programa solicita ao usuário a entrada de **\*\*5 notas\*\***.
-
-As notas são adicionadas dinamicamente ao \`ArrayList\`.
+As notas são adicionadas dinamicamente ao ArrayList.
 
 Exemplo:
 
-\`\`\`java
-
 for (int i = 1; i <= 5; i++) {
-
-    System.out.print("Digite a nota " + i + ": ");
-
-    double nota = scanner.nextDouble();
-
-    notas.add(nota);
-
+    System.out.print("Digite a nota " + i + ": ");
+    double nota = scanner.nextDouble();
+    notas.add(nota);
 }
 
-\`\`\`
-
-**---**
-
-**## 📊 Cálculo da Média**
+📊 Cálculo da Média
 
 O programa percorre todas as notas cadastradas e realiza a soma.
-
-\`\`\`java
 
 double soma = 0;
 
 for (double nota : notas) {
-
-    soma += nota;
-
+    soma += nota;
 }
 
 double media = soma / notas.size();
 
-\`\`\`
-
 Depois, a média é exibida para o usuário.
 
-**---**
+❌ Remoção das Notas Menores que 6
 
-**## ❌ Remoção das Notas Menores que 6**
-
-As notas menores que \`6.0\` são removidas da coleção utilizando:
-
-\`\`\`java
+As notas menores que 6.0 são removidas da coleção utilizando:
 
 notas.removeIf(nota -> nota < 6.0);
 
-\`\`\`
-
 Dessa forma, permanecem na lista somente as notas consideradas aprovadas.
 
-**---**
+📋 Exemplo de Execução
 
-**## 📋 Exemplo de Execução**
-
-\`\`\`text
-
-\=== CONTROLE DE NOTAS ===
+=== CONTROLE DE NOTAS ===
 
 Digite a nota 1: 8.5
-
 Digite a nota 2: 5.5
-
 Digite a nota 3: 7.0
-
 Digite a nota 4: 9.5
-
 Digite a nota 5: 6.0
 
 Notas cadastradas:
-
 [8.5, 5.5, 7.0, 9.5, 6.0]
 
 Média das notas: 7.30
 
-\=== LISTA FINAL DE APROVADOS ===
-
+=== LISTA FINAL DE APROVADOS ===
 [8.5, 7.0, 9.5, 6.0]
 
-\`\`\`
+A nota 5.5 foi removida porque é menor que 6.0.
 
-A nota \`5.5\` foi removida porque é menor que \`6.0\`.
+Conceitos utilizados
 
-**### Conceitos utilizados**
+Collections Framework;
 
-\- Collections Framework;
+List;
 
-\- List;
+ArrayList;
 
-\- ArrayList;
+Scanner;
 
-\- Scanner;
+Double;
 
-\- Double;
+Estrutura for;
 
-\- Estrutura \`for\`;
+Enhanced For;
 
-\- Enhanced For;
+Expressões Lambda;
 
-\- Expressões Lambda;
+removeIf();
 
-\- \`removeIf()\`;
+Entrada de dados;
 
-\- Entrada de dados;
+Cálculo de média.
 
-\- Cálculo de média.
+🔗 Prova 1 - Lista Duplamente Encadeada
 
-**---**
-
-**# 🔗 Prova 1 - Lista Duplamente Encadeada**
-
-Nesta atividade foi implementada uma **\*\*Lista Duplamente Encadeada em Java\*\***.
+Nesta atividade foi implementada uma Lista Duplamente Encadeada em Java.
 
 O objetivo é compreender a estrutura interna de uma lista encadeada utilizando nós que possuem referência tanto para o próximo elemento quanto para o elemento anterior.
 
-O trabalho solicita o cadastro de pelo menos 5 objetos e a implementação dos métodos \`add()\` e \`imprimir()\`.
+O trabalho solicita o cadastro de pelo menos 5 objetos e a implementação dos métodos add() e imprimir().
 
-**---**
-
-**## 📂 Arquivos da Prova 1**
-
-\`\`\`text
+📂 Arquivos da Prova 1
 
 Prova1/
-
 ├── No.java
-
 ├── Livro.java
-
 ├── ListaDuplamenteEncadeada.java
-
 └── Main.java
 
-\`\`\`
+🧩 Classe No
 
-**---**
-
-**## 🧩 Classe No**
-
-A classe \`No\` representa cada elemento da lista.
+A classe No representa cada elemento da lista.
 
 Cada nó possui:
 
-\`\`\`java
-
 Object objeto;
-
 No proximo;
-
 No anterior;
-
-\`\`\`
 
 Dessa forma, cada elemento possui uma referência para o próximo nó e para o nó anterior.
 
-**---**
+📚 Classe Livro
 
-**## 📚 Classe Livro**
-
-Foi utilizada a classe \`Livro\` como modelo de objeto do mundo real.
+Foi utilizada a classe Livro como modelo de objeto do mundo real.
 
 A classe possui os atributos:
 
-\`\`\`java
-
 private String titulo;
-
 private String autor;
-
 private int ano;
-
-\`\`\`
 
 Também foi sobrescrito o método:
 
-\`\`\`java
-
 toString()
-
-\`\`\`
 
 para permitir a exibição organizada dos dados de cada livro.
 
-**---**
+🔗 Classe ListaDuplamenteEncadeada
 
-**## 🔗 Classe ListaDuplamenteEncadeada**
-
-A classe \`ListaDuplamenteEncadeada\` é responsável pelo gerenciamento dos nós.
+A classe ListaDuplamenteEncadeada é responsável pelo gerenciamento dos nós.
 
 Ela possui duas referências principais:
 
-\`\`\`java
-
 private No inicio;
-
 private No fim;
 
-\`\`\`
-
-**---**
-
-**## ➕ Método add()**
+➕ Método add()
 
 O método:
-
-\`\`\`java
 
 add(Object objeto)
 
-\`\`\`
-
 é responsável por adicionar novos objetos ao final da lista.
 
-Quando um novo objeto é inserido, as referências \`proximo\` e \`anterior\` são atualizadas.
+Quando um novo objeto é inserido, as referências proximo e anterior são atualizadas.
 
-**---**
-
-**## 🖨️ Método imprimir()**
+🖨️ Método imprimir()
 
 O método:
 
-\`\`\`java
-
 imprimir()
-
-\`\`\`
 
 percorre a lista do primeiro elemento até o último.
 
 Durante o percurso, cada objeto armazenado na lista é exibido no console.
 
-**---**
-
-**## 📖 Livros cadastrados**
+📖 Livros cadastrados
 
 Foram utilizados 5 livros para testar a Lista Duplamente Encadeada:
 
-1\. Dom Casmurro — Machado de Assis
+Dom Casmurro — Machado de Assis
 
-2\. O Cortiço — Aluísio Azevedo
+O Cortiço — Aluísio Azevedo
 
-3\. Iracema — José de Alencar
+Iracema — José de Alencar
 
-4\. Vidas Secas — Graciliano Ramos
+Vidas Secas — Graciliano Ramos
 
-5\. Capitães da Areia — Jorge Amado
+Capitães da Areia — Jorge Amado
 
-**---**
-
-**## 🔗 Representação da Lista**
-
-\`\`\`text
+🔗 Representação da Lista
 
 null
-
-  ↑
-
+  ↑
 [Livro 1]
-
-  ⇅
-
+  ⇅
 [Livro 2]
-
-  ⇅
-
+  ⇅
 [Livro 3]
-
-  ⇅
-
+  ⇅
 [Livro 4]
-
-  ⇅
-
+  ⇅
 [Livro 5]
-
-  ↓
-
- null
-
-\`\`\`
+  ↓
+ null
 
 Cada elemento possui ligação com o próximo e com o anterior.
 
-**---**
+📋 Exemplo de Execução
 
-**## 📋 Exemplo de Execução**
-
-\`\`\`text
-
-\===== ELEMENTOS DA LISTA =====
-
+===== ELEMENTOS DA LISTA =====
 Título: Dom Casmurro | Autor: Machado de Assis | Ano: 1899
-
 Título: O Cortiço | Autor: Aluísio Azevedo | Ano: 1890
-
 Título: Iracema | Autor: José de Alencar | Ano: 1865
-
 Título: Vidas Secas | Autor: Graciliano Ramos | Ano: 1938
-
 Título: Capitães da Areia | Autor: Jorge Amado | Ano: 1937
 
-\`\`\`
+🧠 Conceitos utilizados na Prova 1
 
-**---**
+Lista Duplamente Encadeada;
 
-**## 🧠 Conceitos utilizados na Prova 1**
+Nós;
 
-\- Lista Duplamente Encadeada;
+Referências;
 
-\- Nós;
+Próximo elemento;
 
-\- Referências;
+Elemento anterior;
 
-\- Próximo elemento;
+Classes;
 
-\- Elemento anterior;
+Objetos;
 
-\- Classes;
+Construtores;
 
-\- Objetos;
+Encapsulamento;
 
-\- Construtores;
+Programação Orientada a Objetos;
 
-\- Encapsulamento;
+Percurso de listas;
 
-\- Programação Orientada a Objetos;
+Método toString();
 
-\- Percurso de listas;
+Estrutura while.
 
-\- Método \`toString()\`;
+🧵 Atividade - Threads Aplicadas a Vetores
 
-\- Estrutura \`while\`.
+Nesta atividade foi desenvolvido um programa em Java utilizando Threads para processar diferentes partes de um vetor de 1000 posições do tipo int.
 
-**---**
+A Thread 1 adiciona 5 aos elementos das posições 0 até 499, enquanto a Thread 2 adiciona 10 aos elementos das posições 500 até 999.
 
+📌 Criação do vetor
 
-**# 🧵 Atividade - Threads Aplicadas a Vetores**
-
-Nesta atividade foi desenvolvido um programa em Java utilizando **Threads** para processar diferentes partes de um vetor de 1000 posições do tipo `int`.
-
-A **Thread 1** adiciona `5` aos elementos das posições `0` até `499`, enquanto a **Thread 2** adiciona `10` aos elementos das posições `500` até `999`.
-
-**## 📌 Criação do vetor**
-
-```java
 int[] vetor = new int[1000];
-```
 
-**## 🧵 Thread 1**
+🧵 Thread 1
 
-```java
 Thread thread1 = new Thread(() -> {
     for (int i = 0; i <= 499; i++) {
         vetor[i] += 5;
     }
 });
-```
 
-**## 🧵 Thread 2**
+🧵 Thread 2
 
-```java
 Thread thread2 = new Thread(() -> {
     for (int i = 500; i <= 999; i++) {
         vetor[i] += 10;
     }
 });
-```
 
-**## ▶️ Inicialização e sincronização**
+▶️ Inicialização e sincronização
 
-```java
 thread1.start();
 thread2.start();
 
 thread1.join();
 thread2.join();
-```
 
-O método `join()` garante que o programa principal aguarde a conclusão das duas Threads antes de imprimir o vetor.
+O método join() garante que o programa principal aguarde a conclusão das duas Threads antes de imprimir o vetor.
 
-**## 📋 Resultado esperado**
+📋 Resultado esperado
 
-- Posições `0` até `499`: valor `5`;
-- Posições `500` até `999`: valor `10`.
+Posições 0 até 499: valor 5;
 
-**## 🧠 Conceitos utilizados**
+Posições 500 até 999: valor 10.
 
-- Threads;
-- Vetores e Arrays;
-- Processamento concorrente;
-- Estruturas de repetição;
-- Métodos `start()` e `join()`;
-- Expressões Lambda.
+🧠 Conceitos utilizados
 
-**## ▶️ Como executar**
+Threads;
 
-```powershell
+Vetores e Arrays;
+
+Processamento concorrente;
+
+Estruturas de repetição;
+
+Métodos start() e join();
+
+Expressões Lambda.
+
+▶️ Como executar
+
+cd Threads
 javac VetorThreads.java
 java VetorThreads
-```
 
-**---**
-
-**# 🛠️ Tecnologias Utilizadas**
+🛠️ Tecnologias Utilizadas
 
 O projeto utiliza:
 
-\- ☕ Java
+☕ Java
 
-\- 📦 Java Collections Framework
+📦 Java Collections Framework
 
-\- 📋 ArrayList
+📋 ArrayList
 
-\- ⌨️ Scanner
+⌨️ Scanner
 
-\- 📁 FileReader
+📁 FileReader
 
-\- 🔗 Lista Duplamente Encadeada
+🔗 Lista Duplamente Encadeada
 
-\- 🧵 Threads
+🧵 Threads
 
-\- 🔄 Estruturas de repetição
+🔄 Estruturas de repetição
 
-\- 🔀 Estruturas condicionais
+🔀 Estruturas condicionais
 
-\- 🧩 Programação Orientada a Objetos
+🧩 Programação Orientada a Objetos
 
-\- 💻 Visual Studio Code
+💻 Visual Studio Code
 
-\- 🌐 Git
+🌐 Git
 
-\- 🐙 GitHub
+🐙 GitHub
 
-**---**
+⚙️ Pré-requisitos
 
-**# ⚙️ Pré-requisitos**
-
-Para executar os programas é necessário possuir o **\*\*Java Development Kit (JDK)\*\*** instalado.
+Para executar os programas é necessário possuir o Java Development Kit (JDK) instalado.
 
 Para verificar a instalação:
 
-\`\`\`bash
-
 java -version
-
-\`\`\`
 
 E:
 
-\`\`\`bash
-
 javac -version
 
-\`\`\`
-
-**---**
-
-**# ▶️ Como Executar**
+▶️ Como Executar
 
 Primeiro, abra o terminal na pasta do projeto.
 
 Exemplo:
 
-\`\`\`text
-
 C:\xampp\htdocs\Aplicacao-de-estrutura-de-dados-
 
-\`\`\`
-
-**---**
-
-**## Executar Atividade 1**
-
-Compile:
-
-\`\`\`bash
+Executar Atividade 1
 
 javac Atividade1.java
-
-\`\`\`
-
-Execute:
-
-\`\`\`bash
-
 java Atividade1
 
-\`\`\`
-
-**---**
-
-**## Executar Atividade 2**
-
-Compile:
-
-\`\`\`bash
+Executar Atividade 2
 
 javac Atividade2.java
-
-\`\`\`
-
-Execute:
-
-\`\`\`bash
-
 java Atividade2
 
-\`\`\`
-
-**---**
-
-**## Executar Atividade 3**
-
-Compile:
-
-\`\`\`bash
+Executar Atividade 3
 
 javac Atividade3.java
-
-\`\`\`
-
-Execute:
-
-\`\`\`bash
-
 java Atividade3
 
-\`\`\`
-
-**---**
-
-**## Executar Prog1**
-
-Compile:
-
-\`\`\`bash
+Executar Prog1
 
 javac prog1.java
-
-\`\`\`
-
-Execute:
-
-\`\`\`bash
-
 java prog1
 
-\`\`\`
-
-**---**
-
-**## Executar Prog2**
-
-Compile:
-
-\`\`\`bash
+Executar Prog2
 
 javac Prog2.java
-
-\`\`\`
-
-Execute:
-
-\`\`\`bash
-
 java Prog2
 
-\`\`\`
+Importante: o arquivo dados.txt deve estar no diretório do projeto para que o Prog2.java consiga realizar sua leitura.
 
-\> **\*\*Importante:\*\*** o arquivo \`dados.txt\` deve estar no diretório do projeto para que o \`Prog2.java\` consiga realizar sua leitura.
-
-**---**
-
-**# ▶️ Executar Prova 1**
+▶️ Executar Prova 1
 
 Entre na pasta:
 
-\`\`\`powershell
-
 cd Prova1
-
-\`\`\`
 
 Compile todos os arquivos:
 
-\`\`\`powershell
-
-javac \*.java
-
-\`\`\`
+javac *.java
 
 Execute o programa principal:
 
-\`\`\`powershell
-
 java Main
-
-\`\`\`
 
 O programa irá cadastrar os livros na Lista Duplamente Encadeada e exibir todos os elementos no terminal.
 
-**---**
+▶️ Executar Atividade de Threads
 
-**# 🧠 Conteúdos Estudados**
+Entre na pasta:
+
+cd Threads
+
+Compile:
+
+javac VetorThreads.java
+
+Execute:
+
+java VetorThreads
+
+🧠 Conteúdos Estudados
 
 Durante o desenvolvimento das atividades foram trabalhados conceitos como:
 
-\- Estruturas de Dados;
+Estruturas de Dados;
 
-\- Arrays;
+Arrays;
 
-\- Vetores;
+Vetores;
 
-\- ArrayList;
+ArrayList;
 
-\- Collections Framework;
+Collections Framework;
 
-\- Tipos primitivos;
+Tipos primitivos;
 
-\- Tipos de referência;
+Tipos de referência;
 
-\- Stack;
+Stack;
 
-\- Heap;
+Heap;
 
-\- Classes;
+Classes;
 
-\- Objetos;
+Objetos;
 
-\- Abstração;
+Abstração;
 
-\- Encapsulamento;
+Encapsulamento;
 
-\- Atributos;
+Atributos;
 
-\- Métodos;
+Métodos;
 
-\- Construtores;
+Construtores;
 
-\- Manipulação de arquivos;
+Manipulação de arquivos;
 
-\- FileReader;
+FileReader;
 
-\- Scanner;
+Scanner;
 
-\- Estruturas condicionais;
+Estruturas condicionais;
 
-\- Estruturas de repetição;
+Estruturas de repetição;
 
-\- Expressões Lambda;
+Expressões Lambda;
 
-\- Nós;
+Nós;
 
-\- Listas Encadeadas;
+Listas Encadeadas;
 
-\- Listas Duplamente Encadeadas;
+Listas Duplamente Encadeadas;
 
-\- Referência para próximo elemento;
+Referência para próximo elemento;
 
-\- Referência para elemento anterior;
+Referência para elemento anterior;
 
-\- Threads;
+Threads;
 
-\- Processamento concorrente;
+Processamento concorrente;
 
-\- Métodos `start()` e `join()`.
+Métodos start() e join().
 
-**---**
-
-**# 📈 Próximas Atividades**
+📈 Próximas Atividades
 
 O repositório continuará sendo atualizado conforme novos conteúdos forem estudados durante a disciplina.
 
 Novas implementações de estruturas de dados serão adicionadas ao longo do semestre.
 
-**---**
+👨‍💻 Autor
 
-**# 👨‍💻 Autor**
+Thales Marques Rodrigues
 
-**\*\*Thales Marques Rodrigues\*\***
-
-🎓 Sistemas para Internet  
-
+🎓 Sistemas para Internet
 🏫 Instituto Federal do Tocantins - IFTO
 
-**---**
+📄 Licença
 
-**## 📄 Licença**
+Este projeto possui finalidade acadêmica e educacional, sendo desenvolvido durante os estudos da disciplina de Aplicação de Estrutura de Dados.
 
-Este projeto possui finalidade **\*\*acadêmica e educacional\*\***, sendo desenvolvido durante os estudos da disciplina de **\*\*Aplicação de Estrutura de Dados\*\***.
-
-**---**
-
-⭐ **\*\*Repositório criado para acompanhamento das atividades e evolução dos estudos em Aplicação de Estrutura de Dados com Java.\*\***
+⭐ Repositório criado para acompanhamento das atividades e evolução dos estudos em Aplicação de Estrutura de Dados com Java.
