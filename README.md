@@ -18,31 +18,6 @@ Linguagem: Java
 
 IDE: Visual Studio Code
 
-📂 Estrutura do Projeto
-
-Aplicacao-de-estrutura-de-dados/
-│
-├── Aulas/
-├── Exercicios/
-├── Link do video/
-├── Prova1/
-│   ├── No.java
-│   ├── Livro.java
-│   ├── ListaDuplamenteEncadeada.java
-│   └── Main.java
-│
-├── Threads/
-│   └── VetorThreads.java
-│
-├── Atividade1.java
-├── Atividade2.java
-├── Atividade3.java
-├── prog1.java
-├── Prog2.java
-├── dados.txt
-├── LICENSE
-└── README.md
-
 💻 Atividades Desenvolvidas
 
 🔹 Prog1 - Vetores e ArrayList
